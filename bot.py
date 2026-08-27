@@ -8,7 +8,7 @@ toàn bộ dữ liệu trả về kèm ảnh banner/avatar đã render sẵn (We
 
 Kiến trúc
 ---------
-    Discord  ──►  bot.py  ──HTTP──►  app.py  (Flask, http://127.0.0.1:5000)
+    Discord  ──►  bot.py  ──HTTP──►  app.py  (Flask, http://127.0.0.1:3000)
                                         │
                                         ├─ /player-info      (JSON người chơi)
                                         ├─ /api/banner/...   (ảnh banner WebP)
@@ -17,7 +17,7 @@ Kiến trúc
 
 Chạy
 ----
-    python app.py          # khởi backend (localhost:5000)
+    python app.py          # khởi backend (localhost:3000)
     python bot.py          # khởi bot (terminal khác)
 
 Hoặc chạy cả hai bằng một lệnh:
@@ -100,7 +100,7 @@ if not DISCORD_TOKEN:
 )
 
 # Nơi đặt backend Flask. Ghi đè bằng FF_API_BASE_URL nếu cần.
-FF_API_BASE_URL = os.getenv("FF_API_BASE_URL", "http://127.0.0.1:5000").rstrip("/")
+FF_API_BASE_URL = os.getenv("FF_API_BASE_URL", "http://127.0.0.1:3000").rstrip("/")
 
 # Không cần quyền truy cập (privileged intent) nào cho lệnh slash/prefix.
 intents = discord.Intents.default()
