@@ -321,8 +321,8 @@ if __name__ == '__main__':
         print(f"[!] Warning during initial token warmup: {e}")
 
     start_token_refresher()
-    print("[*] Free Fire Info Site server starting on http://localhost:5000")
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    print("[*] Free Fire Info Site server starting on http://localhost:3000")
+    app.run(host='0.0.0.0', port=3000, debug=False)
 
 
 
