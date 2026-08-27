@@ -20,7 +20,7 @@ import bot
 
 def _run_flask() -> None:
     # Dev server in a thread; no reloader (would spawn a child process).
-    flask_app.run(host="127.0.0.1", port=3000, debug=False, use_reloader=False)
+    flask_app.run(host="127.0.0.1", port=3000, debug=True, use_reloader=True)
 
 
 if __name__ == "__main__":
